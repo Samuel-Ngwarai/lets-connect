@@ -15,5 +15,5 @@ cd dist
 git init
 git add -A
 git commit -m 'deploy'
-git push -f git@github.com:Samuel-Ngwarai/lets-connect.git main
+git push -f git@github.com:<USERNAME>/<REPO>.git main:gh-pages
 cd -
