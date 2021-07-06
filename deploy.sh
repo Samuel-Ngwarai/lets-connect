@@ -13,7 +13,7 @@ cd dist
 # echo 'www.example.com' > CNAME
 
 git init
-git branch -M main
+# git branch -M main
 git add -A
 git commit -m 'deploy'
 git push -f git@github.com:Samuel-Ngwarai/lets-connect.git main
