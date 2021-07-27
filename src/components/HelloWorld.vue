@@ -1,7 +1,10 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <p>Who will you choose to be tomorrow? Who will you choose to be today?</p>
+    <p>
+      Who will you choose to be tomorrow? Who will you choose to be today
+      {{ firstName }}?
+    </p>
   </div>
 </template>
 
@@ -9,6 +12,12 @@
 import Vue from "vue";
 
 export default Vue.extend({
+  data: () => {
+    return {
+      firstName: "Samuel",
+      lastName: "Ngwarai",
+    };
+  },
   name: "HelloWorld",
   props: {
     msg: String,
