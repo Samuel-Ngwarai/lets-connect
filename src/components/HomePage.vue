@@ -27,6 +27,6 @@ export default Vue.extend({
 }
 
 #subTitle {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 </style>
