@@ -1,17 +1,23 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Update Coming Soon" />
+    <HomePage :firstName="firstName" :lastName="lastName" />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import HomePage from "./components/HomePage.vue";
 
 export default Vue.extend({
+  data: function () {
+    return {
+      firstName: "Samuel",
+      lastName: "Ngwarai",
+    };
+  },
   name: "App",
   components: {
-    HelloWorld,
+    HomePage,
   },
 });
 </script>
