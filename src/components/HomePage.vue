@@ -1,7 +1,9 @@
 <template>
   <div>
-    <div id="name">{{ firstName }} {{ lastName }}</div>
-    <p id="subTitle">Time for some introductions</p>
+    <div id="nameContainer">
+      <p id="name">{{ firstName }} {{ lastName }}</p>
+    </div>
+    <div id="navigationBar"></div>
   </div>
 </template>
 
@@ -22,11 +24,21 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-#name {
-  font-size: 8rem;
+#nameContainer {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-#subTitle {
-  font-size: 1.9rem;
+#name {
+  font-size: 8rem;
+  position: relative;
+}
+
+#navigationBar {
+  height: 15vh;
+  border: dashed gray;
 }
 </style>
