@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <HomePage :firstName="firstName" :lastName="lastName" />
+    <HomePage />
   </div>
 </template>
 
@@ -9,12 +9,6 @@ import Vue from "vue";
 import HomePage from "./components/HomePage.vue";
 
 export default Vue.extend({
-  data: function () {
-    return {
-      firstName: "Samuel",
-      lastName: "Ngwarai",
-    };
-  },
   name: "App",
   components: {
     HomePage,

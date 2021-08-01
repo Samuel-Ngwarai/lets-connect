@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="nameContainer">
-      <p id="name">{{ firstName }} {{ lastName }}</p>
+      <MyName />
     </div>
     <div id="navigationBar"></div>
   </div>
@@ -9,16 +9,11 @@
 
 <script lang="ts">
 import Vue from "vue";
+import MyName from "./MyName.vue";
+
 export default Vue.extend({
-  props: {
-    firstName: {
-      type: String,
-      required: true,
-    },
-    lastName: {
-      type: String,
-      required: true,
-    },
+  components: {
+    MyName,
   },
 });
 </script>
@@ -29,11 +24,6 @@ export default Vue.extend({
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-}
-
-#name {
-  font-size: 8rem;
   position: relative;
 }
 
