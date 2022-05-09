@@ -1,28 +1,30 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Update Coming Soon" />
+    <HomePage />
   </div>
 </template>
 
 <script lang="ts">
 import Vue from "vue";
-import HelloWorld from "./components/HelloWorld.vue";
+import HomePage from "./components/HomePage.vue";
 
 export default Vue.extend({
   name: "App",
   components: {
-    HelloWorld,
+    HomePage,
   },
 });
 </script>
 
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 3vh;
 }
 </style>
