@@ -1,6 +1,9 @@
 <template>
-    <div id="nameContainer">
-        <h1 id="name">Samuel Ngwarai</h1>
+    <div>
+        <HeroBackground></HeroBackground>
+        <div id="nameContainer">
+            <h1 id="name">Samuel Ngwarai</h1>
+        </div>
     </div>
 
 </template>
@@ -9,7 +12,7 @@
 @import '../assets/css/main.css';
 
 :root {
-    --bluegrey: #A8B5B5;
+    --bluegrey: #a7b4b4;
     --skyblue: #a8d0d9;
     --darkblue: #2E3956;
     --red: #E1464B;
