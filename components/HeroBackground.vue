@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas height="500" width="500" id="canvas"></canvas>
+    <canvas id="canvas"></canvas>
   </div>
 </template>
 
@@ -37,7 +37,9 @@ onMounted(() => {
     ) {}
     draw = () => {
       ctx.strokeStyle = "hsla(180, 8%, 68%, 0.303)";
-      ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+      ctx.fillStyle = this.clockwise
+        ? "hsla(358, 72%, 58%, 0.717)"
+        : "hsla(191, 39%, 75%, 0.743)";
 
       const drawLine = (width = 0, color) => {
         ctx.beginPath();
@@ -61,8 +63,8 @@ onMounted(() => {
       ctx.arc(this.x, this.y, 2, 0, Math.PI * 2, false);
       ctx.fill();
       ctx.moveTo(this.x, this.y);
-      const offset = this.clockwise ? 300 : -300;
-      ctx.lineTo(this.x + offset, this.y - 1000);
+      const offset = this.clockwise ? 400 : -400;
+      ctx.lineTo(this.x + offset, this.y - 2000);
       ctx.stroke();
       ctx.closePath();
       this.update();
@@ -110,6 +112,6 @@ onMounted(() => {
 
 <style>
 canvas {
-  background: linear-gradient(45deg, #2e3956 0% 20%, #1f262f);
+  background: linear-gradient(45deg, #1f262f 0% 45%, #2E3956);
 }
 </style>

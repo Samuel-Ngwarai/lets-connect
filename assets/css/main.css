@@ -73,34 +73,4 @@ select {
   }
 
   /**                       End of reset            */
-
-  html {
-    font-size: 10px;
-  }
-
-  @font-face {
-    font-family: 'MPlusRounded';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/MPLUSRounded1c-Medium.ttf') format('truetype');
-  }
-
-  @font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./assets/fonts/RobotoMono-VariableFont_wght.ttf') format('truetype');
-  }
-
-  :root {
-    --bluegrey: #A8B5B5;
-    --skyblue: #a8d0d9;
-    --darkblue: #2E3956;
-    --red: #E1464B;
-    --grey: #E2E3DD;
-    --black: #1f262f;
-    --white: #f7f8fa;
-    --mono: "Roboto", monospace;
-    --sans: 'MPlusRounded', sans-serif;
-  }
 }
