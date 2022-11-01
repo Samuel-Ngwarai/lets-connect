@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen bg-skyblue grid grid-cols-2 pt-20 px-10">
+  <div id="about-section" class="h-screen bg-skyblue grid grid-cols-2 pt-20 px-10">
     <div>
         <p></p>
     </div>

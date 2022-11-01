@@ -6,5 +6,11 @@
 </template>
 
 <script lang="ts" setup>
-  import './assets/css/tailwind.css';
+import "./assets/css/tailwind.css";
 </script>
+
+<style>
+html {
+  scroll-behavior: smooth;
+}
+</style>

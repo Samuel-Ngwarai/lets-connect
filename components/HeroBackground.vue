@@ -75,7 +75,7 @@ onMounted(() => {
       if (!this.clockwise) {
         offset = -10;
       }
-      this.pos = (this.pos + offset) % 62000;
+      this.pos = (this.pos + offset) % 62800;
 
       this.y = this.yRadius * Math.sin(0.0001 * this.pos + offset) + centery;
       this.x = this.xRadius * Math.cos(0.0001 * this.pos + offset) + centerx;
