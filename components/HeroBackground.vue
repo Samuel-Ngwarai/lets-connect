@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas id="canvas"></canvas>
+    <canvas class="bg-homebackground"></canvas>
   </div>
 </template>
 
@@ -109,9 +109,3 @@ onMounted(() => {
   animate();
 });
 </script>
-
-<style>
-canvas {
-  background: linear-gradient(45deg, #1f262f 0% 45%, #2E3956);
-}
-</style>

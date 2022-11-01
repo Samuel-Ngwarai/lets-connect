@@ -26,6 +26,9 @@ module.exports = {
       fontFamily: {
         sans: ["'M PLUS Rounded 1c'",  ...defaultTheme.fontFamily.sans],
         mono: ["Roboto", ...defaultTheme.fontFamily.mono]
+      },
+      backgroundImage: {
+        homebackground: 'linear-gradient(45deg, #1f262f 0% 45%, #2E3956)'
       }
     },
   },
