@@ -1,32 +1,28 @@
 <template>
-  <div id="about-section" class="h-screen bg-skyblue grid grid-cols-2 pt-20 px-10">
+  <div id="about-section" class="bg-skyblue md:grid lg:grid-cols-2 pt-20 px-10">
     <div>
-        <p></p>
     </div>
     <div>
-      <p class="text-6xl text-black">About Me</p>
-      <p class="text-xl py-5">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in mi
-        nec diam mattis ornare quis ut turpis. Class aptent taciti sociosqu ad
-        litora torquent per conubia nostra, per inceptos himenaeos. Mauris
-        laoreet nulla neque, non egestas eros malesuada sed. Donec sed hendrerit
-        felis. In facilisis nunc quis dolor suscipit mattis. Vivamus maximus
-        tristique ultricies. Morbi dignissim neque id quam mollis mattis.
-        Curabitur lacinia dolor et lorem tristique tristique.
-      </p>
-      <p class="text-xl py-5">
-        Aliquam fringilla placerat nulla vel rhoncus. Mauris porta aliquam nibh
-        ac euismod. Phasellus lobortis, mauris et dictum cursus, ex ligula
-        dapibus risus, ut tempus augue dui non dui. Donec scelerisque sed nibh
-        et eleifend. Curabitur risus lorem, porta non rhoncus vel, eleifend
-        vitae purus. Etiam ac auctor purus, quis blandit dolor. Donec ac sodales
-        enim. In ut viverra turpis, at iaculis risus. Maecenas eget ultrices mi.
-        Nulla facilisi. Phasellus sed risus tristique, bibendum turpis ut,
-        consectetur tortor. Quisque facilisis mollis sodales. Curabitur ut elit
-        sed sem fermentum imperdiet. Duis libero augue, malesuada ut risus sed,
-        mattis condimentum lorem. Vestibulum fringilla purus felis, non
-        tristique quam bibendum id. Etiam viverra metus eu feugiat bibendum.
-      </p>
+      <p class="text-6xl text-black">About Me<span class="text-red">...</span></p>
+      <div class="text-xl py-5">
+        <p>
+          Hey again! My name is Samuel Ngwarai and I enjoy building
+          and being part of impactful solutions. The mission I am currently contributing to
+          is that of <BasicLink href="https://www.share-now.com/">ShareNow</BasicLink>,
+          making our cities more liveable by making car-sharing a viable solution for more
+          people and businesses. 
+        </p>
+        <br>
+        <p>
+          My previous experiences include being part of a fast-growing <BasicLink href="https://connect.finleap.com/">fintech startup</BasicLink>
+          and a <BasicLink href="https://www.ibm.com/">large corporation</BasicLink>.
+        </p>
+        <br>
+        <p>
+          My story has but just begun, expect even more interesting chapters up ahead!
+        </p>
+      </div>
+     
     </div>
   </div>
 </template>

@@ -1,42 +1,9 @@
-# Nuxt 3 Minimal Starter
+# samuelngwarai.me
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+Personal website built using [Nuxt3](https://v3.nuxtjs.org), hosted with [Netlify](https://www.netlify.com)
 
-## Setup
+[![Netlify Status](https://api.netlify.com/api/v1/badges/89c9bf0e-5fe3-42af-b2bb-4c76cab71c36/deploy-status)](https://app.netlify.com/sites/eloquent-booth-e0ee57/deploys)
 
-Make sure to install the dependencies:
+Found at: [samuelngwarai.me](https://samuelngwarai.me)
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
+![screenshot](https://raw.githubusercontent.com/Samuel-Ngwarai/lets-connect/main/assets/images/screenshot.png)

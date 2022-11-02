@@ -2,6 +2,8 @@
   <div>
     <TheHero />
     <AboutSection />
+    <ContactSection />
+    <TheFooter />
   </div>
 </template>
 
