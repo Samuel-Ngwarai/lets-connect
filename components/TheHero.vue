@@ -1,7 +1,8 @@
 <template>
   <div>
     <HeroBackground></HeroBackground>
-    <div class="absolute top-0 left-0 grid place-content-center h-screen w-screen md:h-[1150px] md:w-[700px]">
+    <div class="absolute top-0 left-0 grid grid-rows-[3fr_2fr] h-screen w-screen md:w-5/12 md:place-content-center md:grid-rows-[7fr_6fr]">
+      <div></div>
       <div class="font-mono text-white text-3xl font-thin">
         <p>
           Hey! My name is <br />
