@@ -15,6 +15,8 @@ onMounted(() => {
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
+  let windowWidth = canvas.width;
+  let windowHeight = canvas.height;
   let centerx = window.innerWidth / 2;
   let centery = window.innerHeight / 2;
 
@@ -24,6 +26,9 @@ onMounted(() => {
 
     centerx = window.innerWidth / 2;
     centery = window.innerHeight / 2;
+
+    windowWidth = canvas.width;
+    windowHeight = canvas.height;
   });
 
   class Point {
@@ -65,8 +70,6 @@ onMounted(() => {
       ctx.moveTo(this.x, this.y);
       const offset = this.clockwise ? 400 : -400;
       ctx.lineTo(this.x + offset, this.y - 2000);
-      ctx.stroke();
-      ctx.closePath();
       this.update();
     };
     update = () => {
@@ -86,13 +89,15 @@ onMounted(() => {
   const smallerPlatform = [];
   for (let i = 0; i < 62000; i++) {
     if (i % 2000 !== 0) continue;
-    let x = 800 * Math.cos(0.0001 * i) + 400;
-    let y = 100 * Math.sin(0.0001 * i) + 500;
-    largerPlatform.push(new Point(x, y, i, 500, 100));
+    let largeCircleX = windowWidth / 3.5;
+    let largeCircleY = windowHeight / 15;
+    let x = largeCircleX * Math.cos(0.0001 * i) + 400;
+    let y = largeCircleY * Math.sin(0.0001 * i) + 500;
+    largerPlatform.push(new Point(x, y, i, largeCircleX, largeCircleY));
 
-    x = 400 * Math.cos(1 * i) + 400;
-    y = 50 * Math.sin(1 * i) + 500;
-    smallerPlatform.push(new Point(x, y, i, 250, 50, false));
+    x = largeCircleX / 2 * Math.cos(1 * i) + 400;
+    y = largeCircleY / 2 * Math.sin(1 * i) + 500;
+    smallerPlatform.push(new Point(x, y, i, largeCircleX / 2, largeCircleY / 2, false));
   }
 
   function animate() {
@@ -100,10 +105,12 @@ onMounted(() => {
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     largerPlatform.forEach((line) => {
       line.draw();
+      ctx.stroke();
     });
 
     smallerPlatform.forEach((line) => {
       line.draw();
+      ctx.stroke();
     });
   }
   animate();
