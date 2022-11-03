@@ -3,7 +3,7 @@
     <div>
     </div>
     <div>
-      <p class="text-6xl text-black">About Me<span class="text-red">...</span></p>
+      <p class="text-6xl text-black">About Me<span class="text-red"></span></p>
       <div class="text-xl py-5">
         <p>
           Hey again! My name is Samuel Ngwarai and I enjoy building

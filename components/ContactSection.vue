@@ -9,7 +9,10 @@
           </p>
           <br>
           <div class="grid place-content-center w-full">
-            <button onclick="location.href='mailto:samngwarai@gmail.com'" type="button" class="text-darkblue border-black border-2 rounded-lg p-5 hover:border-darkblue hover:text-red hover:shadow-xl transition-all">Say hello!</button>
+            <button
+              onclick="location.href='mailto:samngwarai@gmail.com'"
+              type="button"
+              class="font-mono font-light text-darkblue border-black border-2 rounded-lg p-5 hover:border-darkblue hover:text-red hover:shadow-xl transition-all">Say hello!</button>
           </div>
         </div>
       </div>
