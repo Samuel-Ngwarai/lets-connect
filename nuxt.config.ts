@@ -6,9 +6,16 @@ export default defineNuxtConfig({
     ],
     app: {
       head: {
+        htmlAttrs: {
+          lang: 'en'
+        },
+        title: 'Samuel N',
+        meta: [
+          { name: 'description', content: 'Virtual coffee with Samuel Ngwarai' }
+        ],
         link: [
-          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap' },
-          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&display=swap' },
+          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap', fetchpriority: 'low' },
+          { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&display=swap', fetchpriority: 'low' },
           { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
         ],
       }
