@@ -1,6 +1,6 @@
 <template>
   <div>
-    <canvas class="bg-homebackground"></canvas>
+    <canvas height="100vh" width="100vw" class="bg-homebackground"></canvas>
   </div>
 </template>
 
