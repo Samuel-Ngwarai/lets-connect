@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <canvas v-if="ready" class="bg-homebackground"></canvas>
+  <div class="h-screen bg-homebackground">
+    <canvas class="bg-homebackground"></canvas>
   </div>
 </template>
 
@@ -9,15 +9,12 @@ const { x: mouseX, y: mouseY } = useMouse();
 let canvas;
 let ctx;
 
-const ready = ref(false);
-
 onMounted(() => {
   canvas = document.querySelector("canvas");
   ctx = canvas.getContext("2d");
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  ready.value = true;
 
   let windowWidth = canvas.width;
   let windowHeight = canvas.height;
