@@ -91,12 +91,12 @@ onMounted(() => {
     if (i % 2000 !== 0) continue;
     let largeCircleX = windowWidth / 3.5;
     let largeCircleY = windowHeight / 15;
-    let x = largeCircleX * Math.cos(0.0001 * i) + 400;
-    let y = largeCircleY * Math.sin(0.0001 * i) + 500;
+    let x = largeCircleX * Math.cos(0.0001 * i) + centerx;
+    let y = largeCircleY * Math.sin(0.0001 * i) + centery;
     largerPlatform.push(new Point(x, y, i, largeCircleX, largeCircleY));
 
-    x = largeCircleX / 2 * Math.cos(1 * i) + 400;
-    y = largeCircleY / 2 * Math.sin(1 * i) + 500;
+    x = largeCircleX / 2 * Math.cos(1 * i) + centerx;
+    y = largeCircleY / 2 * Math.sin(1 * i) + centery;
     smallerPlatform.push(new Point(x, y, i, largeCircleX / 2, largeCircleY / 2, false));
   }
 
@@ -113,6 +113,9 @@ onMounted(() => {
       ctx.stroke();
     });
   }
-  animate();
+
+  setTimeout(function(){
+    animate();
+  }, 2000);
 });
 </script>
