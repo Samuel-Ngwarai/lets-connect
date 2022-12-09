@@ -1,17 +1,28 @@
 <template>
   <div class="h-screen bg-homebackground">
+    <div v-if="loading" class="flex items-center justify-center h-screen">
+      <BaseLoadingAnimation></BaseLoadingAnimation>
+    </div>
     <canvas class="bg-homebackground"></canvas>
   </div>
 </template>
 
 <script setup lang="ts">
 const { x: mouseX, y: mouseY } = useMouse();
-let canvas;
-let ctx;
+const loading = ref(true);
 
 onMounted(() => {
-  canvas = document.querySelector("canvas");
-  ctx = canvas.getContext("2d");
+  const canvas = document.querySelector("canvas");
+  if (!canvas) {
+    // skip loading animamtion if canvas not found
+    return;
+  }
+
+  const ctx = canvas.getContext("2d");
+
+  if (!ctx) {
+    return;
+  }
 
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -34,14 +45,16 @@ onMounted(() => {
 
   class Point {
     constructor(
-      private x,
-      private y,
-      private pos,
-      private xRadius,
-      private yRadius,
+      private x: number,
+      private y: number,
+      private pos: number,
+      private xRadius: number,
+      private yRadius: number,
       private clockwise = true
     ) {}
     draw = () => {
+      if (!ctx) return;
+
       ctx.strokeStyle = "hsla(180, 8%, 68%, 0.303)";
       ctx.fillStyle = this.clockwise
         ? "hsla(358, 72%, 58%, 0.717)"
@@ -86,8 +99,8 @@ onMounted(() => {
     };
   }
 
-  const largerPlatform = [];
-  const smallerPlatform = [];
+  const largerPlatform: Point[] = [];
+  const smallerPlatform: Point[] = [];
   for (let i = 0; i < 62000; i++) {
     if (i % 2000 !== 0) continue;
     let largeCircleX = windowWidth / 3.5;
@@ -102,6 +115,8 @@ onMounted(() => {
   }
 
   function animate() {
+    if (!ctx) return;
+
     requestAnimationFrame(animate);
     ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
     largerPlatform.forEach((line) => {
@@ -117,6 +132,7 @@ onMounted(() => {
 
   setTimeout(function(){
     animate();
-  }, 2000);
+    loading.value = false;
+  }, 1200);
 });
 </script>
