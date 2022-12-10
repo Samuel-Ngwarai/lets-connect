@@ -6,9 +6,8 @@
       <p class="text-6xl text-black">About Me<span class="text-red"></span></p>
       <div class="text-xl py-5">
         <p>
-          Hey again! My name is Samuel Ngwarai and I enjoy building
-          and being part of impactful solutions. The mission I am currently contributing to
-          is that of <BasicLink href="https://www.share-now.com/">ShareNow</BasicLink>,
+          I enjoy building and being part of impactful solutions. The mission I am currently
+          contributing to is that of <BasicLink href="https://www.share-now.com/">ShareNow</BasicLink>,
           making our cities more liveable by making car-sharing a viable solution for more
           people and businesses. 
         </p>
