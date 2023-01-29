@@ -20,6 +20,7 @@ export default defineNuxtConfig({
     modules: [
         '@vueuse/nuxt',
         '@nuxtjs/tailwindcss',
+        'nuxt-icon',
         ['@nuxtjs/google-fonts', {
             download: true,
             prefetch: true,
