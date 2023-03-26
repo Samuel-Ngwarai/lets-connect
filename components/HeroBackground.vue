@@ -3,7 +3,7 @@
     <div v-if="loading" class="flex items-center justify-center h-screen">
       <BaseLoadingAnimation></BaseLoadingAnimation>
     </div>
-    <canvas class="bg-homebackground"></canvas>
+    <canvas id="background-canvas" class="bg-homebackground"></canvas>
   </div>
 </template>
 
@@ -12,7 +12,7 @@ const { x: mouseX, y: mouseY } = useMouse();
 const loading = ref(true);
 
 onMounted(() => {
-  const canvas = document.querySelector("canvas");
+  const canvas = document.getElementById("background-canvas") as HTMLCanvasElement;
   if (!canvas) {
     // skip loading animamtion if canvas not found
     return;
@@ -87,7 +87,7 @@ onMounted(() => {
       this.update();
     };
     update = () => {
-      let offset = 10;
+      let offset = 15;
 
       if (!this.clockwise) {
         offset = -10;
